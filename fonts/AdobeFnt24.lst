@@ -1,0 +1,544 @@
+%!Adobe-FontList 1.24
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/AdobeFnt24.lst
+FileLength:13104
+FileModTime:779736150
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:AdobeHebrew-Regular
+FamilyName:Adobe Hebrew
+StyleName:Regular
+MenuName:Adobe Hebrew
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Adobe Hebrew Regular
+FamilyNameNative:
+StyleNameNative:Regular
+FullNameNative:
+WritingScript:Hebrew
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/AdobeHebrew-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:73124
+FileModTime:754496499
+NameArray:0,Mac,18,Adobe Hebrew
+NameArray:0,Mac,4,Adobe Hebrew Regular
+NameArray:0,Win,1,Adobe Hebrew
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ChassiL-Bold
+FamilyName:Chassi
+StyleName:L Bold
+MenuName:Chassi L
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Chassi L Bold
+WritingScript:Roman
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/Chassi-LBold.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:144840
+FileModTime:698572800
+NameArray:0,Mac,4,Chassi L Bold
+NameArray:0,Win,1,Chassi L
+NameArray:0,Win,16,Chassi
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ChassiL-ExtraLight
+FamilyName:Chassi
+StyleName:L ExtraLight
+MenuName:Chassi L ExtraLight
+StyleBits:0
+WeightClass:275
+WidthClass:5
+AngleClass:0
+FullName:Chassi L ExtraLight
+WritingScript:Roman
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/Chassi-LExtraLight.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:142808
+FileModTime:698572800
+NameArray:0,Mac,4,Chassi L ExtraLight
+NameArray:0,Win,1,Chassi L ExtraLight
+NameArray:0,Win,16,Chassi
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ChassiL-Medium
+FamilyName:Chassi
+StyleName:L Medium
+MenuName:Chassi L Medium
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:Chassi L Medium
+WritingScript:Roman
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/Chassi-LMedium.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:144564
+FileModTime:698572800
+NameArray:0,Mac,4,Chassi L Medium
+NameArray:0,Win,1,Chassi L Medium
+NameArray:0,Win,16,Chassi
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ChassiL-Regular
+FamilyName:Chassi
+StyleName:L Regular
+MenuName:Chassi L
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Chassi L Regular
+WritingScript:Roman
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/Chassi-LRegular.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:142584
+FileModTime:698572800
+NameArray:0,Mac,4,Chassi L Regular
+NameArray:0,Win,1,Chassi L
+NameArray:0,Win,16,Chassi
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ChassiM-Bold
+FamilyName:Chassi
+StyleName:M Bold
+MenuName:Chassi M
+StyleBits:2
+WeightClass:700
+WidthClass:6
+AngleClass:0
+FullName:Chassi M Bold
+WritingScript:Roman
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/Chassi-MBold.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:145424
+FileModTime:698572800
+NameArray:0,Mac,4,Chassi M Bold
+NameArray:0,Win,1,Chassi M
+NameArray:0,Win,16,Chassi
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ChassiM-ExtraLight
+FamilyName:Chassi
+StyleName:M ExtraLight
+MenuName:Chassi M ExtraLight
+StyleBits:0
+WeightClass:275
+WidthClass:6
+AngleClass:0
+FullName:Chassi M ExtraLight
+WritingScript:Roman
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/Chassi-MExtraLight.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:145752
+FileModTime:698572800
+NameArray:0,Mac,4,Chassi M ExtraLight
+NameArray:0,Win,1,Chassi M ExtraLight
+NameArray:0,Win,16,Chassi
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ChassiM-Light
+FamilyName:Chassi
+StyleName:M Light
+MenuName:Chassi M Light
+StyleBits:0
+WeightClass:300
+WidthClass:6
+AngleClass:0
+FullName:Chassi M Light
+WritingScript:Roman
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/Chassi-MLight.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:146592
+FileModTime:698572800
+NameArray:0,Mac,4,Chassi M Light
+NameArray:0,Win,1,Chassi M Light
+NameArray:0,Win,16,Chassi
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ChassiM-LightItalic
+FamilyName:Chassi
+StyleName:M Light Italic
+MenuName:Chassi M Light
+StyleBits:1
+WeightClass:300
+WidthClass:6
+AngleClass:1
+FullName:Chassi M Light Italic
+WritingScript:Roman
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/Chassi-MLightItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:160180
+FileModTime:698572800
+NameArray:0,Mac,4,Chassi M Light Italic
+NameArray:0,Win,1,Chassi M Light
+NameArray:0,Win,16,Chassi
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ChassiM-Medium
+FamilyName:Chassi
+StyleName:M Medium
+MenuName:Chassi M Medium
+StyleBits:0
+WeightClass:500
+WidthClass:6
+AngleClass:0
+FullName:Chassi M Medium
+WritingScript:Roman
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/Chassi-MMedium.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:145588
+FileModTime:698572800
+NameArray:0,Mac,4,Chassi M Medium
+NameArray:0,Win,1,Chassi M Medium
+NameArray:0,Win,16,Chassi
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ChassiM-Regular
+FamilyName:Chassi
+StyleName:M Regular
+MenuName:Chassi M
+StyleBits:0
+WeightClass:400
+WidthClass:6
+AngleClass:0
+FullName:Chassi M Regular
+WritingScript:Roman
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/Chassi-MRegular.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:145104
+FileModTime:698572800
+NameArray:0,Mac,4,Chassi M Regular
+NameArray:0,Win,1,Chassi M
+NameArray:0,Win,16,Chassi
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ChassiS-Bold
+FamilyName:Chassi
+StyleName:S Bold
+MenuName:Chassi S
+StyleBits:2
+WeightClass:700
+WidthClass:7
+AngleClass:0
+FullName:Chassi S Bold
+WritingScript:Roman
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/Chassi-SBold.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:143340
+FileModTime:698572800
+NameArray:0,Mac,4,Chassi S Bold
+NameArray:0,Win,1,Chassi S
+NameArray:0,Win,16,Chassi
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ChassiS-ExtraLight
+FamilyName:Chassi
+StyleName:S ExtraLight
+MenuName:Chassi S ExtraLight
+StyleBits:0
+WeightClass:275
+WidthClass:7
+AngleClass:0
+FullName:Chassi S ExtraLight
+WritingScript:Roman
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/Chassi-SExtraLight.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:148848
+FileModTime:698572800
+NameArray:0,Mac,4,Chassi S ExtraLight
+NameArray:0,Win,1,Chassi S ExtraLight
+NameArray:0,Win,16,Chassi
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ChassiS-Medium
+FamilyName:Chassi
+StyleName:S Medium
+MenuName:Chassi S Medium
+StyleBits:0
+WeightClass:500
+WidthClass:7
+AngleClass:0
+FullName:Chassi S Medium
+WritingScript:Roman
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/Chassi-SMedium.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:146448
+FileModTime:698572800
+NameArray:0,Mac,4,Chassi S Medium
+NameArray:0,Win,1,Chassi S Medium
+NameArray:0,Win,16,Chassi
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ChassiS-Regular
+FamilyName:Chassi
+StyleName:S Regular
+MenuName:Chassi S
+StyleBits:0
+WeightClass:400
+WidthClass:7
+AngleClass:0
+FullName:Chassi S Regular
+WritingScript:Roman
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/Chassi-SRegular.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:148260
+FileModTime:698572800
+NameArray:0,Mac,4,Chassi S Regular
+NameArray:0,Win,1,Chassi S
+NameArray:0,Win,16,Chassi
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:DMSans-9ptRegular
+FamilyName:DM Sans
+StyleName:9pt Regular
+MenuName:DM Sans 9pt
+FamilyPrefix:DMSans
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:DM Sans 9pt Regular
+WritingScript:Roman
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/DMSans-VariableFont_opsz,wght 2.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:TrueTypeVariableFont
+FileLength:238984
+FileModTime:710974838
+NameArray:0,Win,1,DM Sans 9pt
+NameArray:0,Win,16,DM Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Faktum-ExtraLight
+FamilyName:Faktum
+StyleName:ExtraLight
+MenuName:Faktum ExtraLight
+StyleBits:0
+WeightClass:200
+WidthClass:5
+AngleClass:0
+FullName:Faktum ExtraLight
+WritingScript:Roman
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/Faktum-ExtraLight.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:89684
+FileModTime:562129200
+NameArray:0,Mac,4,Faktum ExtraLight
+NameArray:0,Win,1,Faktum ExtraLight
+NameArray:0,Win,16,Faktum
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Patika-SemiBold
+FamilyName:Patika
+StyleName:Semi Bold
+MenuName:Patika SemiBold
+StyleBits:2
+WeightClass:600
+WidthClass:5
+AngleClass:0
+FullName:Patika Semi Bold
+WritingScript:Roman
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/Patika-SemiBold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:75064
+FileModTime:713393612
+NameArray:0,Mac,4,Patika Semi Bold
+NameArray:0,Win,1,Patika SemiBold
+NameArray:0,Win,16,Patika
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Yaguar-Bold
+FamilyName:Yaguar
+StyleName:Bold
+MenuName:Yaguar
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Yaguar Bold
+FamilyNameNative:
+StyleNameNative:Bold
+FullNameNative:
+WritingScript:Hebrew
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/Yaguar-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:36116
+FileModTime:721163612
+NameArray:0,Mac,4,Yaguar Bold
+NameArray:0,Win,1,Yaguar
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Yaguar
+FamilyName:Yaguar
+StyleName:Regular
+MenuName:Yaguar
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Yaguar
+FamilyNameNative:
+StyleNameNative:Regular
+FullNameNative:
+WritingScript:Hebrew
+OutlineFileName:/Users/miriamreifman/Ptex Group Dropbox/Ptex Group Team Folder/Hanachal/1_Brand Identity/Development/Presentation/Hanachal Presentation 1.16/Document fonts/Yaguar.ttf
+DataFormat:sfntData
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:36676
+FileModTime:721163612
+NameArray:0,Mac,4,Yaguar
+NameArray:0,Win,1,Yaguar
+%EndFont
+

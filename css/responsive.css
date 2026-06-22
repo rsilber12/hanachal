@@ -1,0 +1,129 @@
+
+@media (min-width: 992px) {
+    .navbar.navbar1 .navbar-brand {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .section2 {
+        height: 100vh;
+        min-height: 500px;
+    }
+    .section2 .img1{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 65%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .section2 .img1.left{
+        left: 0;
+        right: auto;
+    }
+
+    .section2 .img1.small{
+        width: 60%;
+    }
+    body.scroll-body {
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+    
+}
+
+@media (min-width: 1921px) {
+    .section2 .img1 {
+        width: 60%;
+    }
+    .section2 .img1.small {
+        width: 58%;
+    }
+}
+
+@media (max-width: 1399px) {
+    /* .space-top{
+        margin-top: 132px;
+    } */
+    .navbar.navbar1 .nav-link {
+        font-size: .875rem;
+        padding: 10px 6px !important;
+    }
+    .navbar.navbar1 .btn.btn1 {
+        font-size: .875rem;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .space-top{
+        margin-top: 80px;
+    }
+    .logo1 {
+        width: 150px;
+    }
+    .navbar.navbar1 .nav-link {
+        font-size: .75rem;
+        padding: 10px 5px !important;
+    }
+    .navbar.navbar1 .btn.btn1 {
+        padding: 8px 15px;
+    }
+
+}
+
+@media (max-width: 991px) {
+    .space-top{
+        margin-top: 84px;
+    }
+    .logo1 {
+        width: 120px;
+    }
+    .logo2 {
+        width: 150px;
+    }
+    .navbar.navbar1 {
+        padding: 20px 3px;
+    }
+
+    .padding {
+        padding: 60px 3px;
+    }
+    
+
+}
+
+@media (max-width: 767px) {
+    .gallery-main-slider .swiper-slide img {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 575px) {
+    .form-box {
+        padding: 40px 24px;
+    }
+    .section1 .arrow1 {
+        bottom: 50px;
+    }
+    .box-1 {
+        padding: 24px;
+    }
+    .gallery-thumb-slider img {
+        height: 50px;
+    }
+    .icon-play i {
+        font-size: 8rem;
+    }
+    .gallery-thumb-slider .thumb-prev, .gallery-thumb-slider .thumb-next {
+        width: 30px;
+        height: 30px;
+        top: 33px;
+    }
+
+    .gallery-thumb-slider .thumb-prev:after, 
+    .gallery-thumb-slider .thumb-next:after {
+        font-size: 16px;
+    }
+}
