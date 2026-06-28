@@ -7,7 +7,7 @@
         transform: translate(-50%, -50%);
     }
     .section2 {
-        height: 100vh;
+        height:calc(100vh - 82px);
         min-height: 500px;
     }
     .section2 .img1{
@@ -29,6 +29,9 @@
     body.scroll-body {
         overflow: hidden;
         scroll-behavior: smooth;
+    }
+    .scroll-top-btn {
+        bottom: 55px;
     }
     
 }
@@ -125,5 +128,8 @@
     .gallery-thumb-slider .thumb-prev:after, 
     .gallery-thumb-slider .thumb-next:after {
         font-size: 16px;
+    }
+    .icon-play i{
+        visibility: hidden !important;
     }
 }

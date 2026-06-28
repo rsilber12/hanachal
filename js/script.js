@@ -113,7 +113,7 @@ if (window.innerWidth >= 992) {
 
         smoothScrollTo(
             targetPosition,
-            100
+            50
         );
 
     }
@@ -295,4 +295,25 @@ scrollTopBtn.addEventListener("click", () => {
         top: 0,
         behavior: "smooth"
     });
+});
+
+const video = document.getElementById("myVideo");
+const playBtn = document.getElementById("playBtn");
+
+playBtn.addEventListener("click", function () {
+    if (video.paused) {
+        video.play();
+        playBtn.style.display = "none";
+    } else {
+        video.pause();
+        playBtn.style.display = "block";
+    }
+});
+
+video.addEventListener("pause", () => {
+    playBtn.style.display = "block";
+});
+
+video.addEventListener("ended", () => {
+    playBtn.style.display = "block";
 });

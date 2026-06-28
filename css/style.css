@@ -308,7 +308,7 @@ body p a:hover {
     outline: none !important;
     padding: 10px 20px;
     font-size: .875rem;
-    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .form.form1 .form-control:focus {
@@ -477,6 +477,34 @@ body p a:hover {
 
 .gallery-thumb-slider .thumb-prev:after, 
 .gallery-thumb-slider .thumb-next:after {
+    font-size: 20px;
+}
+
+.gallery-main-slider .thumb-prev,
+.gallery-main-slider .thumb-next{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0,0,0,.15);
+    color: var(--secondary-color);
+}
+
+.gallery-main-slider .thumb-prev{
+    left: 10px;
+}
+
+.gallery-main-slider .thumb-next{
+    right: 10px;
+}
+
+.gallery-main-slider .thumb-prev:after, 
+.gallery-main-slider .thumb-next:after {
     font-size: 20px;
 }
 
