@@ -1,0 +1,44 @@
+
+<script type="text/javascript">
+  app.post("/api/signup", async (req, res) => {
+  const { email, name } = req.body;
+  const query = `
+    mutation {
+      create_item (
+        board_id: 5029432493,
+        item_name: "${name || email}",
+        column_values: "{\"email\":\"${email}\"}"
+      ) {
+        id
+      }
+    }
+  `;
+  const response = await fetch("https://api.monday.com/v2", {
+    method: "POST",
+    headers: {
+      "Authorization": process.env.MONDAY_API_TOKEN,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ query })
+  });
+  res.json(await response.json());
+});
+</script>
+
+<form id="signupForm">
+  <input type="email" name="email" placeholder="Email address" required>
+  <button type="submit">Sign Up</button>
+</form>
+<script>
+document.getElementById("signupForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const email = e.target.email.value;
+  await fetch("/api/signup", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ email })
+  });
+  alert("Thank you for signing up!");
+});
+
+</script>

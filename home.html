@@ -79,11 +79,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="tour.html">Take a tour</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://news.hanachalresidences.com/">News</a>
+
                         </li>
-                    </ul>
-                </div>
+                        <li class="nav-item">
+                        <a class="nav-link" href="https://news.hanachalresidences.com/">News</a>
+                    </li>
+                </ul>
             </div>
         </nav>
 
@@ -100,7 +101,7 @@
                 webkit-playsinline
                 preload="auto"
             >
-                <source src="videos/magnific_animate-the-render_3003916739.mp4" type="video/mp4">
+                <source src="videos/hero.mp4" type="video/mp4">
             </video>
             <div class="text w-100 h-100 position-absolute top-0 start-0 d-flex align-items-center text-center padding">
                 <div class="container">
@@ -140,10 +141,11 @@
         </div>
 
         <div id="living" class="section1 position-relative border-btm snap-section">
-            <video
+            <!-- <img src="images/Hanahal-living_View2.png" class="img-fluid w-100 img1" alt=""> -->
+             <video
                 class="video1"
-                autoplay
                 muted
+                autoplay
                 loop
                 playsinline
                 webkit-playsinline
@@ -151,7 +153,6 @@
             >
                 <source src="videos/v6.mp4" type="video/mp4">
             </video>
-            <!--<img src="images/Hanahal-living_View2.png" class="img-fluid w-100 img1" alt="">-->
             <div class="text w-100 h-100 position-absolute top-0 start-0 d-flex align-items-center text-center padding">
                 <div class="container">
                     <h1 class="display-3 lh-1 text-color-main" data-aos="zoom-out" data-aos-delay="100">Premier Reserveside <br/> <i>Residences</i>.</h1>
@@ -196,19 +197,20 @@
                 <div class="row gy-4 align-items-end">
                     <div class="col-lg-7">
                         <div class="position-relative">
-                            <img src="images/fa502aa64c4718e33b089da42381e7d99297a604.png" class="img-fluid w-100" alt="">
-                            <!-- <video class="w-100" controls>
-                                <source src="videos/video.mp4" type="video/mp4">
+                            <!-- <img src="images/fa502aa64c4718e33b089da42381e7d99297a604.png" class="img-fluid w-100" alt=""> -->
+                            <video id="myVideo" class="w-100" controls poster="images/fa502aa64c4718e33b089da42381e7d99297a604.png">
+                                <source src="videos/video1.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
-                            </video> -->
-                            <a href="#" class="position-absolute top-50 start-50 translate-middle text-white icon-play">
+                            </video>
+                            <a href="javascript:void(0)" id="playBtn"
+                                class="position-absolute top-50 start-50 translate-middle text-white icon-play">
                                 <i class="bi bi-play-fill opacity-50"></i>
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-5 ps-lg-5">
-                        <p class="text-color-brown d-inline-block px-2 mb-4"
-                        style="background: #D7D0BA;" data-aos="fade-up" data-aos-delay="100">coming soon</p>
+                        <!-- <p class="text-color-brown d-inline-block px-2 mb-4"
+                        style="background: #D7D0BA;" data-aos="fade-up" data-aos-delay="100">coming soon</p> -->
                         <p class="text-color-main mb-4 font-family-1 text-uppercase fs-6 fw-light letter-spacing-30" data-aos="fade-up" data-aos-delay="100">In Your Words</p>
                         <h1 class="display-4 lh-1 text-color-main mb-1" data-aos="fade-up" data-aos-delay="200">Why families are choosing HaNachal as their Jerusalem home.</h1>
                     </div>
@@ -242,39 +244,58 @@
                             <h1 class="display-6 lh-1 text-color-main mb-3">Let’s help make <br> your vision a <i>reality</i>.</h1>
                             <p class="">Our team is eager to discuss either virtually or in-person.</p>
 
-                            <form action="" class="form form1">
+                            <form class="form form1" id="contact_form">
+
+                                <div id="responseMsg"></div>
+
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="First Name">
+                                    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name">
+                                    <small class="text-danger error" id="first_name_error"></small>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Last Name">
+                                    <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name">
+                                    <small class="text-danger error" id="last_name_error"></small>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Phone">
+                                    <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone">
+                                    <small class="text-danger error" id="phone_error"></small>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="email" class="form-control" placeholder="Email">
+                                    <input type="email" name="" id="email" class="form-control" placeholder="Email">
+                                    <small class="text-danger error" id="email_error"></small>
                                 </div>
                                 <div class="mb-3">
-                                    <textarea class="form-control h-auto" placeholder="Message (Optional)" rows="4"></textarea>
+                                    <textarea class="form-control h-auto" name="msg" id="msg" placeholder="Message (Optional)" rows="4"></textarea>
+                                    <small class="text-danger error" id="msg_error"></small>
                                 </div>
 
                                 <div class="d-flex gap-3">
                                     <div class="w-100">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="formCheckDefault">
+                                            <input class="form-check-input" type="checkbox" name="news" value="Yes" id="formCheckDefault">
                                             <label class="form-check-label fw-normal fs-13" for="formCheckDefault">I<span class="bracket">'</span>d like to receive updates about the Hanachal project</label>
                                         </div>
                                     </div>
                                     <div class="text-end">
-                                        <button type="submit" class="btn btn1">Submit</button>
+                                        <button type="submit" class="btn btn1" id="submitBtn">Submit</button>
                                     </div>
                                 </div>
-
                             </form>
                         </div>
                     </div>
                 </div>
+                <!-- Loader Modal -->
+                    <div class="modal fade" id="loaderModal" data-bs-backdrop="static" data-bs-keyboard="false">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content border-0 shadow">
+                                <div class="modal-body text-center p-5">
+                                    <div class="spinner-border text-primary mb-3"></div>
+                                    <h5>Please wait...</h5>
+                                    <p class="mb-0">Sending your message</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
 
@@ -304,9 +325,10 @@
                         <p class="text-uppercase fw-normal mb-1 letter-spacing-10">Stay updated</p>
                         <p class="fs-12">Follow along as HaNachal comes to life</p>
 
-                        <form action="" class="form form1">
+                        <form id="newsletterForm" class="form form1">
                             <div class="">
-                                <input type="email" class="form-control" placeholder="Email">
+                                <input type="email" id="email_id" class="form-control" placeholder="Email">
+                                <div id="result"></div>
                                 <button type="submit" class="btn btn1 btn3 mt-2 px-3 py-1" style="
                                     min-width: auto;
                                 ">Submit</button>
@@ -325,6 +347,8 @@
     <script src="js/SmoothScroll.js"></script>
     <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/contact.js"></script>
 
 </body>
 
