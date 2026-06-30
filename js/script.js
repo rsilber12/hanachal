@@ -300,14 +300,24 @@ scrollTopBtn.addEventListener("click", () => {
 const video = document.getElementById("myVideo");
 const playBtn = document.getElementById("playBtn");
 
+// Custom Play Button
 playBtn.addEventListener("click", function () {
-    if (video.paused) {
-        video.play();
-        playBtn.style.display = "none";
-    } else {
-        video.pause();
-        playBtn.style.display = "block";
-    }
+    video.play();
+});
+
+// Video Play
+video.addEventListener("play", function () {
+    playBtn.style.display = "none";
+});
+
+// Video Pause
+video.addEventListener("pause", function () {
+    playBtn.style.display = "block";
+});
+
+// Video End
+video.addEventListener("ended", function () {
+    playBtn.style.display = "block";
 });
 
 video.addEventListener("pause", () => {

@@ -102,6 +102,6 @@ $(document).ready(function () {
 
     });
 
-    $("#newsletterForm").submit(function(e){ e.preventDefault(); $.ajax({ url:"signup.php", type:"POST", data:{ email:$("#email_id").val() }, dataType:"json", success:function(res){ if(res.status=="success") { $("#newsletterForm")[0].reset(); alert("Thank you for your interest in Hanachal Residences. We’ve received your submission and our team will be in touch shortly."); } else { $("#result").html( "<span style='color:red; font-size: .875rem; font-weight: 100;'>"+res.message+"</span>" ); } } }); }); 
+    $("#newsletterForm").submit(function(e){ e.preventDefault(); $.ajax({ url:"signup.php", type:"POST", data:{ email:$("#email_id").val() }, dataType:"json", success:function(res){ if(res.status=="success") { $("#newsletterForm")[0].reset(); alert("Thank you for your interest in Hanachal Residences. We have received your submission and our team will be in touch shortly."); } else { $("#result").html( "<span style='color:red; font-size: .875rem; font-weight: 100;'>"+res.message+"</span>" ); } } }); }); 
 
 });
