@@ -1,6 +1,7 @@
 $(document).ready(function () {
     const CONTACT_FORM_ENDPOINT = "https://api.web3forms.com/submit";
     const WEB3FORMS_ACCESS_KEY = "e9455987-9a4c-43f9-b5f2-a526143b7227";
+    const NEWSLETTER_ENDPOINT = "https://hook.eu2.make.com/y3rrgfgj8pwholbg2v8i3ldjdj3wg5e2";
 
     const successMessage = "Thank you for your interest in Hanachal Residences. We've received your submission and our team will be in touch shortly.";
 
@@ -88,6 +89,20 @@ $(document).ready(function () {
 
                 return result;
             });
+        });
+    }
+
+    function submitToMake(data) {
+        const payload = new URLSearchParams();
+
+        Object.keys(data).forEach(function (key) {
+            payload.append(key, data[key]);
+        });
+
+        return fetch(NEWSLETTER_ENDPOINT, {
+            method: "POST",
+            mode: "no-cors",
+            body: payload
         });
     }
 
@@ -186,24 +201,16 @@ $(document).ready(function () {
             return false;
         }
 
-        $.ajax({
-            url: "signup.php",
-            type: "POST",
-            data: {
-                email: email
-            },
-            dataType: "json",
-            success: function (res) {
-                if (res.status == "success") {
-                    $("#newsletterForm")[0].reset();
-                    showSuccessPopup(successMessage);
-                } else {
-                    showInlineError("#result", res.message);
-                }
-            },
-            error: function () {
+        submitToMake({
+            form_type: "newsletter_signup",
+            email: email,
+            source_page: window.location.href,
+            submitted_at: new Date().toISOString()
+        }).then(function () {
+            $("#newsletterForm")[0].reset();
+            showSuccessPopup(successMessage);
+        }).catch(function () {
                 showInlineError("#result", "Something went wrong. Please try again.");
-            }
         });
     });
 });
