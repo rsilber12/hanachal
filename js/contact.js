@@ -17,7 +17,6 @@ $(document).ready(function () {
                     '</button>' +
                     '<p class="hanachal-success-popup__eyebrow">Message received</p>' +
                     '<p class="hanachal-success-popup__message"></p>' +
-                    '<button type="button" class="btn btn1 hanachal-success-popup__button">Close</button>' +
                 '</div>' +
             '</div>'
         );
@@ -29,7 +28,6 @@ $(document).ready(function () {
         });
 
         $(".hanachal-success-popup__close").on("click", hideSuccessPopup);
-        $(".hanachal-success-popup__button").on("click", hideSuccessPopup);
     }
 
     function showSuccessPopup(message) {
