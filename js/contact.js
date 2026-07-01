@@ -4,6 +4,44 @@ $(document).ready(function () {
 
     const successMessage = "Thank you for your interest in Hanachal Residences. We've received your submission and our team will be in touch shortly.";
 
+    function ensureSuccessPopup() {
+        if ($("#hanachalSuccessPopup").length) {
+            return;
+        }
+
+        $("body").append(
+            '<div id="hanachalSuccessPopup" class="hanachal-success-popup" role="dialog" aria-modal="true" aria-live="polite">' +
+                '<div class="hanachal-success-popup__panel">' +
+                    '<button type="button" class="hanachal-success-popup__close" aria-label="Close success message">' +
+                        '<span aria-hidden="true">&times;</span>' +
+                    '</button>' +
+                    '<p class="hanachal-success-popup__eyebrow">Message received</p>' +
+                    '<p class="hanachal-success-popup__message"></p>' +
+                    '<button type="button" class="btn btn1 hanachal-success-popup__button">Close</button>' +
+                '</div>' +
+            '</div>'
+        );
+
+        $("#hanachalSuccessPopup").on("click", function (e) {
+            if (e.target.id === "hanachalSuccessPopup") {
+                hideSuccessPopup();
+            }
+        });
+
+        $(".hanachal-success-popup__close").on("click", hideSuccessPopup);
+        $(".hanachal-success-popup__button").on("click", hideSuccessPopup);
+    }
+
+    function showSuccessPopup(message) {
+        ensureSuccessPopup();
+        $("#hanachalSuccessPopup .hanachal-success-popup__message").text(message);
+        $("#hanachalSuccessPopup").addClass("is-visible");
+    }
+
+    function hideSuccessPopup() {
+        $("#hanachalSuccessPopup").removeClass("is-visible");
+    }
+
     function isValidEmail(email) {
         return /^\S+@\S+\.\S+$/.test(email);
     }
@@ -119,7 +157,7 @@ $(document).ready(function () {
                 loader.hide();
             }
 
-            showAlert("#responseMsg", "success", successMessage);
+            showSuccessPopup(successMessage);
             $("#contact_form")[0].reset();
         }).catch(function () {
             if (loader) {
@@ -156,7 +194,7 @@ $(document).ready(function () {
             success: function (res) {
                 if (res.status == "success") {
                     $("#newsletterForm")[0].reset();
-                    alert(successMessage);
+                    showSuccessPopup(successMessage);
                 } else {
                     showInlineError("#result", res.message);
                 }
