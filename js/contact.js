@@ -4,6 +4,7 @@ $(document).ready(function () {
     const NEWSLETTER_ENDPOINT = "https://hook.eu2.make.com/y3rrgfgj8pwholbg2v8i3ldjdj3wg5e2";
 
     const successMessage = "Thank you for your interest in Hanachal Residences. We've received your submission and our team will be in touch shortly.";
+    const newsletterSuccessMessage = "Thank you for subscribing to HaNachal email newsletter";
 
     function ensureSuccessPopup() {
         if ($("#hanachalSuccessPopup").length) {
@@ -222,7 +223,7 @@ $(document).ready(function () {
             submitted_at: new Date().toISOString()
         }).then(function () {
             $("#newsletterForm")[0].reset();
-            showSuccessPopup(successMessage);
+            showSuccessPopup(newsletterSuccessMessage);
         }).catch(function () {
                 showInlineError("#result", "Something went wrong. Please try again.");
         });
