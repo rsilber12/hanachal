@@ -156,6 +156,8 @@ $(document).ready(function () {
             loader.show();
         }
 
+        const contactSubmittedAt = new Date().toISOString();
+
         submitToWeb3Forms({
             access_key: WEB3FORMS_ACCESS_KEY,
             subject: "New Contact Form Enquiry",
@@ -168,8 +170,20 @@ $(document).ready(function () {
             message: msg,
             newsletter_preference: news,
             source_page: window.location.href,
-            submitted_at: new Date().toISOString()
+            submitted_at: contactSubmittedAt
         }).then(function () {
+            if (news == "Yes") {
+                submitToMake({
+                    form_type: "contact_newsletter_opt_in",
+                    email: email,
+                    first_name: first_name,
+                    last_name: last_name,
+                    phone: phone,
+                    source_page: window.location.href,
+                    submitted_at: contactSubmittedAt
+                });
+            }
+
             if (loader) {
                 loader.hide();
             }
