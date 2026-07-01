@@ -11,9 +11,11 @@ $(document).ready(function () {
 
         $("body").append(
             '<div id="hanachalSuccessPopup" class="hanachal-success-popup" role="dialog" aria-modal="true" aria-live="polite" style="position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(29,29,27,.78);">' +
-                '<div class="hanachal-success-popup__panel" style="width:min(560px,100%);position:relative;padding:48px 38px 42px;text-align:center;color:#C7C3AC;background:#201D1E;border:1px solid #C7C3AC;border-radius:6px;">' +
+                '<div class="hanachal-success-popup__panel" style="width:min(560px,100%);position:relative;padding:48px 38px 42px;text-align:center;color:#C7C3AC;background:#1d1d1b;border:1px solid #C7C3AC;border-radius:6px;">' +
                     '<button type="button" class="hanachal-success-popup__close" aria-label="Close success message" style="position:absolute;top:14px;right:18px;z-index:1;width:34px;height:34px;padding:0;border:0;border-radius:50%;color:#C7C3AC;background:transparent;font-size:2rem;line-height:1;cursor:pointer;">' +
-                        '<span aria-hidden="true">&times;</span>' +
+                        '<svg class="hanachal-success-popup__close-icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" focusable="false">' +
+                            '<path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path>' +
+                        '</svg>' +
                     '</button>' +
                     '<p class="hanachal-success-popup__eyebrow" style="margin:0 0 14px;color:#7D776F;font-size:.75rem;font-weight:300;text-transform:uppercase;letter-spacing:.09em;">Message received</p>' +
                     '<p class="hanachal-success-popup__message" style="max-width:430px;margin:0 auto;color:#C7C3AC;font-family:Chassi-M,serif;font-size:1.45rem;font-weight:300;line-height:1.35;"></p>' +
