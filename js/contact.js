@@ -1,6 +1,5 @@
 $(document).ready(function () {
-    const CONTACT_FORM_ENDPOINT = "https://api.web3forms.com/submit";
-    const WEB3FORMS_ACCESS_KEY = "e9455987-9a4c-43f9-b5f2-a526143b7227";
+    const CONTACT_FORM_ENDPOINT = "https://hook.eu2.make.com/j1ducn9zd7aarqwm1jizbt898d2urrwd";
     const NEWSLETTER_ENDPOINT = "https://hook.eu2.make.com/y3rrgfgj8pwholbg2v8i3ldjdj3wg5e2";
 
     const successMessage = "Thank you for your interest in Hanachal Residences. We've received your submission and our team will be in touch shortly.";
@@ -66,41 +65,14 @@ $(document).ready(function () {
         return new bootstrap.Modal(loaderEl);
     }
 
-    function submitToWeb3Forms(data) {
-        return fetch(CONTACT_FORM_ENDPOINT, {
-            method: "POST",
-            headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        }).then(function (response) {
-            if (!response.ok) {
-                throw new Error("Form submission failed");
-            }
-
-            return response.json().catch(function () {
-                return {
-                    success: true
-                };
-            }).then(function (result) {
-                if (result.success === false) {
-                    throw new Error(result.message || "Form submission failed");
-                }
-
-                return result;
-            });
-        });
-    }
-
-    function submitToMake(data) {
+    function submitToMake(endpoint, data) {
         const payload = new URLSearchParams();
 
         Object.keys(data).forEach(function (key) {
             payload.append(key, data[key]);
         });
 
-        return fetch(NEWSLETTER_ENDPOINT, {
+        return fetch(endpoint, {
             method: "POST",
             mode: "no-cors",
             body: payload
@@ -159,11 +131,8 @@ $(document).ready(function () {
 
         const contactSubmittedAt = new Date().toISOString();
 
-        submitToWeb3Forms({
-            access_key: WEB3FORMS_ACCESS_KEY,
-            subject: "New Contact Form Enquiry",
-            from_name: "Hanachal Website",
-            form_type: "Contact Form",
+        submitToMake(CONTACT_FORM_ENDPOINT, {
+            form_type: "contact_inquiry",
             first_name: first_name,
             last_name: last_name,
             phone: phone,
@@ -174,7 +143,7 @@ $(document).ready(function () {
             submitted_at: contactSubmittedAt
         }).then(function () {
             if (news == "Yes") {
-                submitToMake({
+                submitToMake(NEWSLETTER_ENDPOINT, {
                     form_type: "contact_newsletter_opt_in",
                     email: email,
                     first_name: first_name,
@@ -216,7 +185,7 @@ $(document).ready(function () {
             return false;
         }
 
-        submitToMake({
+        submitToMake(NEWSLETTER_ENDPOINT, {
             form_type: "newsletter_signup",
             email: email,
             source_page: window.location.href,
