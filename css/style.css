@@ -69,6 +69,10 @@
     --text-color: #1D1D1B;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Elza" !important;
     background-color: var(--background-color) !important;

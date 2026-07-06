@@ -3,7 +3,10 @@ AOS.init({
     once: true
 });
 
-if (window.innerWidth >= 992) {
+const pageFileName = window.location.pathname.split("/").pop() || "home.html";
+const isHomePage = pageFileName === "home.html" || pageFileName === "index.html";
+
+if (isHomePage && window.innerWidth >= 992) {
 
     const sections =
         document.querySelectorAll(".snap-section");
@@ -305,8 +308,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    if (isHomePage) return;
+
     const targets = document.querySelectorAll(
-        ".snap-section h1, .snap-section h2, .reserve-gallery-section h1, .form-box h1"
+        ".snap-section h1, .snap-section h2, .snap-section h5, .reserve-gallery-section h1, .form-box h1"
     );
 
     let wordIndex = 0;
