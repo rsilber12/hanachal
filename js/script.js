@@ -6,15 +6,65 @@ AOS.init({
 const pageFileName = window.location.pathname.split("/").pop() || "home.html";
 const isHomePage = pageFileName === "home.html" || pageFileName === "index.html";
 
-if (!isHomePage && window.SmoothScroll) {
-    SmoothScroll({
-        animationTime: 1150,
-        stepSize: 72,
-        pulseScale: 5,
-        accelerationDelta: 90,
-        accelerationMax: 1.35,
-        arrowScroll: 38
+if (!isHomePage) {
+    if (window.SmoothScroll && SmoothScroll.destroy) {
+        SmoothScroll.destroy();
+    }
+
+    let premiumScrollTarget = window.pageYOffset;
+    let premiumScrollFrame = null;
+
+    function getPremiumScrollMax() {
+        return Math.max(
+            document.body.scrollHeight,
+            document.documentElement.scrollHeight
+        ) - window.innerHeight;
+    }
+
+    function clampPremiumScroll(value) {
+        return Math.max(0, Math.min(value, getPremiumScrollMax()));
+    }
+
+    function animatePremiumScroll() {
+        const current = window.pageYOffset;
+        const distance = premiumScrollTarget - current;
+
+        if (Math.abs(distance) < .5) {
+            window.scrollTo(0, premiumScrollTarget);
+            premiumScrollFrame = null;
+            return;
+        }
+
+        window.scrollTo(0, current + distance * .075);
+        premiumScrollFrame = requestAnimationFrame(animatePremiumScroll);
+    }
+
+    window.addEventListener("wheel", (event) => {
+        if (event.ctrlKey || window.innerWidth < 992) return;
+
+        event.preventDefault();
+
+        const modeMultiplier = event.deltaMode === 1 ? 16 : 1;
+        const softenedDelta = event.deltaY * modeMultiplier * .58;
+
+        premiumScrollTarget = clampPremiumScroll(
+            premiumScrollTarget + softenedDelta
+        );
+
+        if (!premiumScrollFrame) {
+            premiumScrollFrame = requestAnimationFrame(animatePremiumScroll);
+        }
+    }, { passive: false });
+
+    window.addEventListener("resize", () => {
+        premiumScrollTarget = clampPremiumScroll(premiumScrollTarget);
     });
+
+    window.addEventListener("scroll", () => {
+        if (!premiumScrollFrame) {
+            premiumScrollTarget = window.pageYOffset;
+        }
+    }, { passive: true });
 }
 
 if (isHomePage && window.innerWidth >= 992) {
