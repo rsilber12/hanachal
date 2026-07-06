@@ -35,7 +35,7 @@ if (!isHomePage) {
             return;
         }
 
-        window.scrollTo(0, current + distance * .075);
+        window.scrollTo(0, current + distance * .16);
         premiumScrollFrame = requestAnimationFrame(animatePremiumScroll);
     }
 
@@ -45,7 +45,7 @@ if (!isHomePage) {
         event.preventDefault();
 
         const modeMultiplier = event.deltaMode === 1 ? 16 : 1;
-        const softenedDelta = event.deltaY * modeMultiplier * .58;
+        const softenedDelta = event.deltaY * modeMultiplier * .9;
 
         premiumScrollTarget = clampPremiumScroll(
             premiumScrollTarget + softenedDelta
