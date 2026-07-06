@@ -6,6 +6,17 @@ AOS.init({
 const pageFileName = window.location.pathname.split("/").pop() || "home.html";
 const isHomePage = pageFileName === "home.html" || pageFileName === "index.html";
 
+if (!isHomePage && window.SmoothScroll) {
+    SmoothScroll({
+        animationTime: 1150,
+        stepSize: 72,
+        pulseScale: 5,
+        accelerationDelta: 90,
+        accelerationMax: 1.35,
+        arrowScroll: 38
+    });
+}
+
 if (isHomePage && window.innerWidth >= 992) {
 
     const sections =
