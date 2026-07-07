@@ -99,7 +99,7 @@ $(document).ready(function () {
             .append(
                 '<div class="hanachal-phone-row">' +
                     '<div class="hanachal-country-code-field">' +
-                        '<input type="text" name="country_code" id="country_code" class="form-control" placeholder="Country Code" inputmode="tel" autocomplete="tel-country-code" required>' +
+                        '<input type="text" name="country_code" id="country_code" class="form-control" placeholder="Country Code" value="+" inputmode="tel" autocomplete="tel-country-code" required>' +
                         '<small class="text-danger error" id="country_code_error"></small>' +
                     '</div>' +
                     '<div class="hanachal-phone-number-field"></div>' +
@@ -110,6 +110,11 @@ $(document).ready(function () {
     }
 
     ensureCountryCodeField();
+
+    $("#country_code").on("focus input", function () {
+        const digits = $(this).val().replace(/\D/g, "").slice(0, 4);
+        $(this).val("+" + digits);
+    });
 
     $("#contact_form").submit(function (e) {
         e.preventDefault();
@@ -136,7 +141,12 @@ $(document).ready(function () {
             valid = false;
         }
 
-        if (country_code == "") {
+        if (country_code && country_code.charAt(0) !== "+") {
+            country_code = "+" + country_code.replace(/\D/g, "");
+            $("#country_code").val(country_code);
+        }
+
+        if (country_code == "" || country_code == "+") {
             $("#country_code_error").html("Country code is required");
             valid = false;
         } else if (!/^\+[0-9]{1,4}$/.test(country_code)) {
