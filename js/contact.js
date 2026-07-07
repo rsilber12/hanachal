@@ -86,12 +86,27 @@ $(document).ready(function () {
             return;
         }
 
-        phoneField.closest(".col-12").before(
-            '<div class="col-12">' +
-                '<input type="text" name="country_code" id="country_code" class="form-control" placeholder="Country Code (e.g. +1)" inputmode="tel" autocomplete="tel-country-code" required>' +
-                '<small class="text-danger error" id="country_code_error"></small>' +
-            '</div>'
-        );
+        const phoneGroup = phoneField.closest(".mb-3");
+        const phoneError = $("#phone_error").detach();
+
+        phoneField
+            .detach()
+            .attr("placeholder", "Phone Number");
+
+        phoneGroup
+            .addClass("hanachal-phone-field-group")
+            .empty()
+            .append(
+                '<div class="hanachal-phone-row">' +
+                    '<div class="hanachal-country-code-field">' +
+                        '<input type="text" name="country_code" id="country_code" class="form-control" placeholder="Country Code" inputmode="tel" autocomplete="tel-country-code" required>' +
+                        '<small class="text-danger error" id="country_code_error"></small>' +
+                    '</div>' +
+                    '<div class="hanachal-phone-number-field"></div>' +
+                '</div>'
+            );
+
+        phoneGroup.find(".hanachal-phone-number-field").append(phoneField, phoneError);
     }
 
     ensureCountryCodeField();
