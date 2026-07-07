@@ -324,6 +324,19 @@ body p a:hover {
     font-weight: 300;
 }
 
+.hanachal-phone-row {
+    display: flex;
+    gap: 10px;
+}
+
+.hanachal-country-code-field {
+    flex: 0 0 38%;
+}
+
+.hanachal-phone-number-field {
+    flex: 1 1 auto;
+}
+
 .form.form1 .form-check-input[type=checkbox] {
     border-radius: 50%;
     background-color: transparent;
