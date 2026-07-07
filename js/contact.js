@@ -79,6 +79,23 @@ $(document).ready(function () {
         });
     }
 
+    function ensureCountryCodeField() {
+        const phoneField = $("#phone");
+
+        if (!phoneField.length || $("#country_code").length) {
+            return;
+        }
+
+        phoneField.closest(".col-12").before(
+            '<div class="col-12">' +
+                '<input type="text" name="country_code" id="country_code" class="form-control" placeholder="Country Code (e.g. +1)" inputmode="tel" autocomplete="tel-country-code" required>' +
+                '<small class="text-danger error" id="country_code_error"></small>' +
+            '</div>'
+        );
+    }
+
+    ensureCountryCodeField();
+
     $("#contact_form").submit(function (e) {
         e.preventDefault();
 
@@ -87,6 +104,7 @@ $(document).ready(function () {
 
         let first_name = $("#first_name").val().trim();
         let last_name = $("#last_name").val().trim();
+        let country_code = $("#country_code").val().trim();
         let phone = $("#phone").val().trim();
         let email = $("#email").val().trim();
         let msg = $("#msg").val().trim();
@@ -100,6 +118,14 @@ $(document).ready(function () {
 
         if (last_name == "") {
             $("#last_name_error").html("Last name is required");
+            valid = false;
+        }
+
+        if (country_code == "") {
+            $("#country_code_error").html("Country code is required");
+            valid = false;
+        } else if (!/^\+[0-9]{1,4}$/.test(country_code)) {
+            $("#country_code_error").html("Enter valid country code, for example +1");
             valid = false;
         }
 
@@ -135,7 +161,9 @@ $(document).ready(function () {
             form_type: "contact_inquiry",
             first_name: first_name,
             last_name: last_name,
+            country_code: country_code,
             phone: phone,
+            full_phone: country_code + phone,
             email: email,
             message: msg,
             newsletter_preference: news,
@@ -148,7 +176,9 @@ $(document).ready(function () {
                     email: email,
                     first_name: first_name,
                     last_name: last_name,
+                    country_code: country_code,
                     phone: phone,
+                    full_phone: country_code + phone,
                     source_page: window.location.href,
                     submitted_at: contactSubmittedAt
                 });
