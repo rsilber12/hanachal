@@ -112,9 +112,26 @@ $(document).ready(function () {
     ensureCountryCodeField();
 
     $("#country_code").on("focus input", function () {
-        const digits = $(this).val().replace(/\D/g, "").slice(0, 4);
+        const digits = $(this).val().replace(/\D/g, "");
         $(this).val("+" + digits);
     });
+
+    function ensureNewsletterNameField() {
+        const newsletterEmail = $("#newsletterForm #email_id");
+
+        if (!newsletterEmail.length || $("#newsletter_full_name").length) {
+            return;
+        }
+
+        newsletterEmail.closest(".mb-3").before(
+            '<div class="mb-3">' +
+                '<input type="text" id="newsletter_full_name" name="full_name" class="form-control" placeholder="Full Name" autocomplete="name" required>' +
+                '<small class="text-danger error" id="newsletter_full_name_error"></small>' +
+            '</div>'
+        );
+    }
+
+    ensureNewsletterNameField();
 
     $("#contact_form").submit(function (e) {
         e.preventDefault();
@@ -149,7 +166,7 @@ $(document).ready(function () {
         if (country_code == "" || country_code == "+") {
             $("#country_code_error").html("Country code is required");
             valid = false;
-        } else if (!/^\+[0-9]{1,4}$/.test(country_code)) {
+        } else if (!/^\+[0-9]+$/.test(country_code)) {
             $("#country_code_error").html("Enter valid country code, for example +1");
             valid = false;
         }
@@ -157,8 +174,8 @@ $(document).ready(function () {
         if (phone == "") {
             $("#phone_error").html("Phone number is required");
             valid = false;
-        } else if (!/^[0-9]{10}$/.test(phone)) {
-            $("#phone_error").html("Enter valid 10 digit mobile number");
+        } else if (!/^[0-9]+$/.test(phone)) {
+            $("#phone_error").html("Enter numbers only");
             valid = false;
         }
 
@@ -227,8 +244,15 @@ $(document).ready(function () {
     $("#newsletterForm").submit(function (e) {
         e.preventDefault();
 
+        const full_name = $("#newsletter_full_name").val().trim();
         const email = $("#email_id").val().trim();
         $("#result").html("");
+        $("#newsletter_full_name_error").html("");
+
+        if (full_name == "") {
+            $("#newsletter_full_name_error").html("Full name is required");
+            return false;
+        }
 
         if (email == "") {
             showInlineError("#result", "Email is required");
@@ -242,6 +266,7 @@ $(document).ready(function () {
 
         submitToMake(NEWSLETTER_ENDPOINT, {
             form_type: "newsletter_signup",
+            full_name: full_name,
             email: email,
             source_page: window.location.href,
             submitted_at: new Date().toISOString()
