@@ -123,7 +123,7 @@ $(document).ready(function () {
             return;
         }
 
-        newsletterEmail.closest(".mb-3").before(
+        newsletterEmail.before(
             '<div class="mb-3">' +
                 '<input type="text" id="newsletter_full_name" name="full_name" class="form-control" placeholder="Full Name" autocomplete="name" required>' +
                 '<small class="text-danger error" id="newsletter_full_name_error"></small>' +
